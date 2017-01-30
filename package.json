@@ -2,13 +2,15 @@
   "name": "lifetech",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "build-storybook": "build-storybook -o ./.out"
   },
   "dependencies": {
     "babel-runtime": "^6.22.0",
     "meteor-node-stubs": "~0.2.0",
     "onsenui": "^2.0.5",
     "react": "^15.4.2",
+    "react-addons-pure-render-mixin": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-onsenui": "^1.1.0"
   }
