@@ -1,25 +1,20 @@
-import React, {Component} from 'react'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
-import MenuIcon from './components/MenuIcon.jsx'
+import React from 'react';
+
+import { Navigator } from 'react-onsenui';
+import MainPage from './MainPage.jsx'
 
 // App component - represents the whole app
-export default class App extends Component {
-  render() {
-    return (
-      <div className="container">
-        <Header/>
-        <div id="menu-icon">
-          <MenuIcon menuName="Search"/>
-          <MenuIcon menuName="Profiles"/>
-          <MenuIcon menuName="Browse"/>
-          <MenuIcon nmenuNameame="Test"/>
-          <MenuIcon menuName="Blog"/>
-          <MenuIcon menuName="Something"/>
-        </div>
-        <div id="content">{this.props.children}</div>
-        <Footer/>
-      </div>
-    );
-  }
-}
+const App = () => {
+  const renderPage = (route, navigator) => {
+    return <route.component key={route.key} navigator={navigator} {...route.props} />
+  };
+
+  return (
+    <Navigator
+      renderPage={renderPage}
+      initialRoute={{component: MainPage, key: 'MAIN_PAGE'}}
+    />
+  );
+};
+
+export default App;
