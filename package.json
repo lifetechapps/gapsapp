@@ -1,5 +1,5 @@
 {
-  "name": "gapsapp",
+  "name": "LifeTech Apps",
   "private": true,
   "scripts": {
     "start": "meteor run"
