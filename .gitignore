@@ -1,10 +1,1 @@
-node_modules
-babel_cache
-.meteor
-
-# Project
-.DS_Store
-
-# Compiled files
-public/css
-public/js/*.js
+node_modules/

@@ -42,7 +42,7 @@ class SideMenu extends React.Component {
           <BackButton>Back</BackButton>
         </div>
         <div className='center'>
-          Side menu
+          LifeTech Apps
         </div>
         <div className='right'>
           <ToolbarButton onClick={this.show.bind(this)}>
@@ -67,9 +67,9 @@ class SideMenu extends React.Component {
             isSwipeable={true}>
             <Page>
               <List
-                dataSource={[1, 2, 3, 4]}
+                dataSource={["Home", "Search", "Category", "Profile", "Settings"]}
                 renderHeader={() => <ListHeader>Menu</ListHeader>}
-                renderRow={(i) => <ListItem modifier='longdivider' tappable>{'Menu item ' + i}</ListItem>}
+                renderRow={(i) => <ListItem modifier='longdivider' tappable>{i}</ListItem>}
               />
             </Page>
           </SplitterSide>
