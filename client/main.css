@@ -1,1 +1,21 @@
 /* CSS declarations go here */
+.my-sample-icon {
+  font-size: 80px;
+  height: 1em;
+  background: url(/images/sample.png) center/contain no-repeat;
+}
+
+@media only screen and (max-width: 300px) {
+  .my-custom-icon {
+    font-size: 30px;
+    background-image: url(/images/sample..png);
+  }
+}
+
+.ons-icon {
+  vertical-align:-10px;
+}
+
+.content {
+  color:'white';
+}

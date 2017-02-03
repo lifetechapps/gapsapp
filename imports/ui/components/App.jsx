@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import {Link, browserHistory} from 'react-router'
 
 import {
     Page,
@@ -7,7 +8,6 @@ import {
     SplitterContent,
     Toolbar,
     ToolbarButton,
-    BackButton,
     Icon,
     List,
     ListItem,
@@ -35,7 +35,7 @@ class SideMenu extends React.Component {
         return (
             <Toolbar>
                 <div className='left'>
-                    <BackButton>Back</BackButton>
+                    <ToolbarButton onClick={browserHistory.goBack}>Back</ToolbarButton>
                 </div>
                 <div className='center'>
                     LifeTech Apps
@@ -79,7 +79,7 @@ class SideMenu extends React.Component {
                                 "Settings"
                             ]}
                                 renderHeader={() => <ListHeader>Menu</ListHeader>}
-                                renderRow={(i) => <ListItem modifier='longdivider' tappable>{i}</ListItem>}/>
+                                renderRow={(i) => <Link to={i.toLowerCase()}><ListItem modifier='longdivider' tappable>{i}</ListItem></Link>}/>
                         </Page>
                     </SplitterSide>
 
