@@ -73,13 +73,13 @@ class SideMenu extends React.Component {
                                 dataSource={[
                                 "Home",
                                 "Search",
-                                "Plans",
-                                "Category",
-                                "Profile",
+                                "Plan",
+                                "Foods",
+                                "Profiles",
                                 "Settings"
                             ]}
                                 renderHeader={() => <ListHeader>Menu</ListHeader>}
-                                renderRow={(i) => <Link to={i.toLowerCase()}><ListItem modifier='longdivider' tappable>{i}</ListItem></Link>}/>
+                                renderRow={(i) => <Link to={i.toLowerCase()}><ListItem key={i} modifier='longdivider' tappable>{i}</ListItem></Link>}/>
                         </Page>
                     </SplitterSide>
 
