@@ -16,5 +16,5 @@ export default class Food extends Component {
 }
 
 Food.propTypes = {
-    key: PropTypes.object.isRequired
+    food: PropTypes.object.isRequired
 }

@@ -29,24 +29,24 @@ class FoodList extends Component {
             })
     }
 
-    renderFoods(element, index, array) {
-        return (
-            <div className="category-list">
-                <h2>{element[0].category}</h2>
-                <List>
-                    {element.map((food) => {
-                        return (<Food food={food}/>)
-                    })}
-                </List>
-            </div>
-        )
-    }
-
     renderAllFoods() {
         let foodList = this.groupBy(this.props.foods, function (item) {
             return item.category
         })
-        return foodList.forEach(this.renderFoods)
+        let content = foodList.map((element) => {
+            return (
+                <div className="category-list">
+                    <h2>{element[0].category}</h2>
+                    <List>
+                        {element.map((food) => {
+                            return (<Food food={food}/>)
+                        })}
+                    </List>
+                </div>
+            )
+        })
+        console.log(content)
+        return content
     }
 
     render() {
