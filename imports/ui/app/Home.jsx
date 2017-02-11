@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router'
-import {Icon, Row, Col} from 'react-onsenui'
+import {Row, Col} from 'react-onsenui'
 
 export default class Home extends React.Component {
     constructor(props) {

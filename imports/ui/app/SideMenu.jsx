@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import {Link} from 'react-router'
 
 import {
   Page,
@@ -12,27 +13,23 @@ import {
   List,
   ListItem,
   ListHeader
-} from 'react-onsenui';
+} from 'react-onsenui'
 
 class SideMenu extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       isOpen: false
-    };
+    }
   }
 
   hide() {
-    this.setState({
-      isOpen: false
-    });
+    this.setState({isOpen: false})
   }
 
   show() {
-    this.setState({
-      isOpen: true
-    });
+    this.setState({isOpen: true})
   }
 
   renderToolbar() {
@@ -45,12 +42,14 @@ class SideMenu extends React.Component {
           LifeTech Apps
         </div>
         <div className='right'>
-          <ToolbarButton onClick={this.show.bind(this)}>
-            <Icon icon='ion-navicon, material:md-menu' />
+          <ToolbarButton onClick={this
+            .show
+            .bind(this)}>
+            <Icon icon='ion-navicon, material:md-menu'/>
           </ToolbarButton>
         </div>
       </Toolbar>
-    );
+    )
   }
 
   render() {
@@ -60,8 +59,12 @@ class SideMenu extends React.Component {
           <SplitterSide
             side='right'
             isOpen={this.state.isOpen}
-            onClose={this.hide.bind(this)}
-            onOpen={this.show.bind(this)}
+            onClose={this
+            .hide
+            .bind(this)}
+            onOpen={this
+            .show
+            .bind(this)}
             collapse={true}
             width={240}
             isSwipeable={true}>
@@ -69,22 +72,26 @@ class SideMenu extends React.Component {
               <List
                 dataSource={["Home", "Search", "Category", "Profile", "Settings"]}
                 renderHeader={() => <ListHeader>Menu</ListHeader>}
-                renderRow={(i) => <ListItem modifier='longdivider' tappable>{i}</ListItem>}
-              />
+                renderRow={(i) => <Link to=`{i.toLowerCase()}`><ListItem modifier='longdivider' tappable>{i}</ListItem></Link>}
             </Page>
           </SplitterSide>
 
           <SplitterContent>
-            <Page renderToolbar={this.renderToolbar.bind(this)}>
-              <p style={{textAlign: 'center'}}>
+            <Page
+              renderToolbar={this
+              .renderToolbar
+              .bind(this)}>
+              <p style={{
+                textAlign: 'center'
+              }}>
                 Swipe left to open menu!
               </p>
             </Page>
           </SplitterContent>
         </Splitter>
       </Page>
-    );
+    )
   }
 }
 
-module.exports = SideMenu;
+module.exports = SideMenu
