@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react'
-import {Meteor} from 'meteor/meteor'
 import {Link} from 'react-router'
 import {ListItem} from 'react-onsenui'
 
@@ -8,7 +7,8 @@ export default class Food extends Component {
         return (
             <div className="list-item">
                 <ListItem key={this.props.food._id}>
-                    <Link to={`food/${this.props.food._id}`}><ons-icon icon='fa-apple'/>&nbsp;{this.props.food.text}</Link>
+                    <Link to={`food/${this.props.food._id}`}>{this.props.food.text}&nbsp;&nbsp;<span className="phase-number">({this.props.food.phase})</span>
+                    </Link>
                 </ListItem>
             </div>
         )

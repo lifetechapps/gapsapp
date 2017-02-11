@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import {Link} from 'react-router'
 import {Meteor} from 'meteor/meteor'
 import {createContainer} from 'meteor/react-meteor-data'
-import {List, ListItem} from 'react-onsenui'
+import {List, ListItem, ListHeader} from 'react-onsenui'
 
 import {Foods} from '../../api/foods/foods.js'
 
@@ -36,7 +36,7 @@ class FoodList extends Component {
         let content = foodList.map((element) => {
             return (
                 <div className="category-list">
-                    <h2>{element[0].category}</h2>
+                    <ListHeader><ons-icon icon='fa-apple'/>&nbsp;{element[0].category}&nbsp;&nbsp;{element.length}&nbsp;Items</ListHeader>
                     <List>
                         {element.map((food) => {
                             return (<Food food={food}/>)
@@ -45,7 +45,6 @@ class FoodList extends Component {
                 </div>
             )
         })
-        console.log(content)
         return content
     }
 

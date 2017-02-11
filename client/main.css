@@ -1,7 +1,13 @@
 /* CSS declarations go here */
 .list-item {
-  vertical-align:"middle";
-  font-size:120%;
+  vertical-align:middle;
+  font-size:100%;
+}
+
+.phase-number {
+  font-size:75%;
+  font-weight: bold;
+  vertical-align:middle;
 }
 
 .content {
