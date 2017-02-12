@@ -34,6 +34,20 @@ class FoodList extends Component {
             return item.category
         })
         let content = foodList.map((element) => {
+            element
+                .sort(function (a, b) {
+                    let nameA = a
+                            .text
+                            .toLowerCase(),
+                        nameB = b
+                            .text
+                            .toLowerCase()
+                    if (nameA < nameB) //sort string ascending
+                        return -1
+                    if (nameA > nameB) 
+                        return 1
+                    return 0 //default return value (no sorting)
+                })
             return (
                 <div className="category-list">
                     <ListHeader><ons-icon icon='fa-apple'/>&nbsp;{element[0].category}&nbsp;&nbsp;{element.length}&nbsp;Items</ListHeader>
