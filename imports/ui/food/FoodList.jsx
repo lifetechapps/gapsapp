@@ -62,7 +62,7 @@ class FoodList extends Component {
                 })
             return (
                 <div className="category-list">
-                    <ListHeader><ons-icon icon='fa-apple'/>&nbsp;{element[0].category}&nbsp;&nbsp;{element.length}&nbsp;Items</ListHeader>
+                    <ListHeader><ons-icon icon='fa-apple'/>&nbsp;<span className="category-heading">{element[0].category}&nbsp;&nbsp;{element.length}&nbsp;Items</span></ListHeader>
                     <List>
                         {element.map((food) => {
                             return <Food food={food}/>
