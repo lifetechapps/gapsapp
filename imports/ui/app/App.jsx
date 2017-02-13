@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, browserHistory} from 'react-router'
+import { Link, browserHistory } from 'react-router'
 
 import {
     Page,
@@ -12,23 +12,23 @@ import {
     List,
     ListItem,
     ListHeader
-} from 'react-onsenui';
+} from 'react-onsenui'
 
 class SideMenu extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor( props ) {
+        super( props )
 
         this.state = {
             isOpen: false
-        };
+        }
     }
 
     hide() {
-        this.setState({isOpen: false});
+        this.setState( { isOpen: false })
     }
 
     show() {
-        this.setState({isOpen: true});
+        this.setState( { isOpen: true })
     }
 
     renderToolbar() {
@@ -43,13 +43,13 @@ class SideMenu extends React.Component {
                 <div className='right'>
                     <ToolbarButton
                         onClick={this
-                        .show
-                        .bind(this)}>
-                        <Icon icon='ion-navicon, material:md-menu'/>
+                            .show
+                            .bind( this )}>
+                        <Icon icon='ion-navicon, material:md-menu' />
                     </ToolbarButton>
                 </div>
             </Toolbar>
-        );
+        )
     }
 
     render() {
@@ -60,35 +60,35 @@ class SideMenu extends React.Component {
                         side='right'
                         isOpen={this.state.isOpen}
                         onClose={this
-                        .hide
-                        .bind(this)}
+                            .hide
+                            .bind( this )}
                         onOpen={this
-                        .show
-                        .bind(this)}
+                            .show
+                            .bind( this )}
                         collapse={true}
                         width={240}
                         isSwipeable={true}>
                         <Page>
                             <List
                                 dataSource={[
-                                "Home",
-                                "Search",
-                                "Plan",
-                                "Foods",
-                                "Profiles",
-                                "Settings"
-                            ]}
-                                renderRow={(i) => <Link to={i.toLowerCase()}>
-                                <ListItem key={i} modifier='longdivider' tappable>{i}</ListItem>
-                            </Link>}/>
+                                    "Home",
+                                    "Search",
+                                    "Plan",
+                                    "Foods",
+                                    "Profiles",
+                                    "Settings"
+                                ]}
+                                renderRow={( i ) => <Link to={i.toLowerCase()}>
+                                    <ListItem key={i} modifier='longdivider' tappable>{i}</ListItem>
+                                </Link>} />
                         </Page>
                     </SplitterSide>
 
                     <SplitterContent>
                         <Page
                             renderToolbar={this
-                            .renderToolbar
-                            .bind(this)}>
+                                .renderToolbar
+                                .bind( this )}>
                             <div className="content">
                                 {this.props.children}
                             </div>
@@ -96,8 +96,8 @@ class SideMenu extends React.Component {
                     </SplitterContent>
                 </Splitter>
             </Page>
-        );
+        )
     }
 }
 
-module.exports = SideMenu;
+module.exports = SideMenu

@@ -1,20 +1,21 @@
 /* CSS declarations go here */
 .list-item {
-  vertical-align:middle;
-  font-size:100%;
+	vertical-align: middle;
+	font-size: 100%;
 }
 
 .phase-number {
-  font-size:75%;
-  font-weight: bold;
-  vertical-align:middle;
+	font-size: 75%;
+	font-weight: bold;
+	vertical-align: middle;
 }
 
 .category-heading {
-  text-transform: uppercase;
-  font-size:130%;
-  color: darkmagenta;
+	text-transform: uppercase;
+	font-size: 130%;
+	color: darkmagenta;
 }
+
 .content {
-  color:'white';
+	color: 'white';
 }
