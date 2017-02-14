@@ -14,7 +14,7 @@ export const renderRoutes = () => (
             <IndexRedirect to="/home"/>
             <Route path="home" component={Home}/>
             <Route path="foods" component={FoodList}/>
-            <Route path="food/:id" component={FoodDetails}/>
+            <Route path="food/:foodId" component={FoodDetails}/>
             <Route path="*" component={NotFound}/>
         </Route>
     </Router>
