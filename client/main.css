@@ -10,6 +10,11 @@
 	vertical-align: middle;
 }
 
+.selector {
+	vertical-align: middle;
+	font-size: 100%;
+}
+
 .category-heading {
 	text-transform: uppercase;
 	font-size: 130%;

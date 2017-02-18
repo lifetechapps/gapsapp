@@ -7,7 +7,7 @@ export default class Food extends Component {
         return (
             <div className="list-item">
                 <Link to={`/food/${this.props.food._id}`}> <ListItem key={this.props.food._id}>
-                    {this.props.food.name} &nbsp;&nbsp;<span className="phase-number">({this.props.food.phase} )</span>
+                    {this.props.food.name} &nbsp;&nbsp;<span className="phase-number">({this.props.food.phase})</span>
                 </ListItem></Link>
             </div>
         )

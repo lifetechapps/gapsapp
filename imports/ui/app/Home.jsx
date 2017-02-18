@@ -40,7 +40,7 @@ export default class Home extends React.Component {
                 </Row>
                 <Row verticalAlign='bottom'>
                     <Col align='middle' width='50%'>
-                        <Link to="settings"><ons-icon icon='ion-search, material:md-search' size='3x' fixed-width='true'/><br/>Profiles</Link>
+                        <Link to="profile"><ons-icon icon='ion-search, material:md-search' size='3x' fixed-width='true'/><br/>Profiles</Link>
                     </Col>
                     <Col align='middle' width='50%'>
                         <Link to="settings"><ons-icon icon='ion-gear-a, material:md-settings' size='3x' fixed-width='true'/><br/>Settings</Link>

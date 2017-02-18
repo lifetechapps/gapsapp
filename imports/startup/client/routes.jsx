@@ -1,5 +1,5 @@
 import React from 'react'
-import {Router, Route, IndexRoute, IndexRedirect, browserHistory} from 'react-router'
+import { Router, Route, IndexRoute, IndexRedirect, browserHistory } from 'react-router'
 
 // route components
 import App from '../../ui/app/App.jsx'
@@ -11,11 +11,11 @@ import FoodDetails from '../../ui/food/FoodDetails.jsx'
 export const renderRoutes = () => (
     <Router history={browserHistory}>
         <Route path="/" component={App}>
-            <IndexRedirect to="/home"/>
-            <Route path="home" component={Home}/>
-            <Route path="foods" component={FoodList}/>
-            <Route path="food/:foodId" component={FoodDetails}/>
-            <Route path="*" component={NotFound}/>
+            <IndexRedirect to="/home" />
+            <Route path="home" component={Home} />
+            <Route path="foods" component={FoodList} />
+            <Route path="food/:foodId" component={FoodDetails} />
+            <Route path="*" component={NotFound} />
         </Route>
     </Router>
 )
