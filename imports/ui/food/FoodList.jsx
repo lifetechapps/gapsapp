@@ -43,12 +43,15 @@ class FoodList extends Component {
         let foodList = this.groupBy( this.props.foods, function( item ) {
             return item.category
         })
-        let content = foodList.map(( element ) => {
+        let content = foodList.map( element => {
             return (
                 <div className="category-list">
                     <SpeedDial position="bottom right">
                         <Fab>
-                            <Icon icon="fa-chevron-circle-up" />
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-star-o fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x">7</i>
+                            </span>
                         </Fab>
                         {[1, 2, 3, 4, 5, 6, 7].map( phase =>
                             <SpeedDialItem onClick={this.phase.bind( this, { phase })}>
@@ -59,7 +62,7 @@ class FoodList extends Component {
                             </SpeedDialItem> )
                         }
                     </SpeedDial>
-                    <ListHeader><ons-icon icon='fa-apple' />&nbsp;<span className="category-heading">{element[0].category} &nbsp;&nbsp;{element.length} &nbsp;Items</span></ListHeader>
+                    <ListHeader><Icon icon='fa-apple' />&nbsp;<span className="category-heading">{element[0].category} &nbsp;&nbsp;{element.length} &nbsp;Items</span></ListHeader>
                     <List>
                         {element.map(( food ) => {
                             return <Food food={food} />
@@ -74,9 +77,7 @@ class FoodList extends Component {
     render() {
         return (
 
-            <div className="container">
-                <div className="selector">GAPS Phase:&nbsp;7</div>
-                {this.renderAllFoods()}</div>
+            <div className="container">{this.renderAllFoods()}</div>
         )
     }
 }
